@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Henry Graphs</title>
+    <meta name="description" content="A locally hosted, original graphing calculator for GitHub Pages.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel">
+        <div class="brand">
+          <div>
+            <h1>Henry Graphs</h1>
+          </div>
+        </div>
+
+        <form class="composer" id="expression-form">
+          <label class="visually-hidden" for="expression-input">Expression</label>
+          <div class="composer-row">
+            <input id="expression-input" type="text" autocomplete="off" spellcheck="false" placeholder="cos(x) * x / 3">
+            <button type="submit">Plot</button>
+          </div>
+          <p class="hint" id="parser-hint">Try x^2, x^3, sqrt(x), or pi. They type as x², x³, √(x), and π.</p>
+        </form>
+
+        <div class="toolbar">
+          <button id="zoom-in" type="button">Zoom in</button>
+          <button id="zoom-out" type="button">Zoom out</button>
+          <button id="reset-view" type="button">Reset</button>
+        </div>
+
+        <div class="expressions" id="expressions" aria-live="polite"></div>
+      </section>
+
+      <section class="stage" aria-label="Interactive graph">
+        <div class="canvas-card">
+          <canvas id="graph" width="1400" height="1000"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
