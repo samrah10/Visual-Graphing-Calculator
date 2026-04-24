@@ -1,7 +1,5 @@
 # Henry Graphs
 
-An original, locally hosted graphing calculator inspired by the idea of browser-based math exploration, but with its own name, layout, visual language, and implementation.
-
 ## Run Locally
 
 Use any static server from this folder:
